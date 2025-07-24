@@ -3,13 +3,22 @@ import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import './index.css';
 import { initLenis } from './utils/lenis';
+import CartProvider from './context/CartContext'; // ✅ default import
 
 const Root = () => {
   useEffect(() => {
     initLenis();
   }, []);
 
-  return <App />;
+  return (
+    <CartProvider>
+      <App />
+    </CartProvider>
+  );
 };
 
-ReactDOM.createRoot(document.getElementById('root')).render(<Root />);
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <Root />
+  </React.StrictMode>
+);
