@@ -1,6 +1,5 @@
 import HeroSection from "../components/HeroSection";
 import FeaturedSection from "../components/FeaturedSection";
-import About from "./About";
 import AboutSection from "../components/AboutSection";
 import GallerySection from "../components/GallerySection";
 import TestimonialsSection from "../components/TestimonialsSection";
