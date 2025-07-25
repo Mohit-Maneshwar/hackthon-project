@@ -14,7 +14,7 @@ const Navbar = () => {
     { name: "Home", path: "/" },
     { name: "Products", path: "/products" },
     { name: "About", path: "/about" },
-    { name: "Login", path: "/login" },
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
@@ -22,7 +22,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-8 py-4 flex items-center justify-between">
         {/* 🔰 Brand Logo */}
         <Link to="/" className="text-2xl font-bold text-rose-500">
-          ShopifyX
+          ManeStore
         </Link>
 
         {/* 🖥️ Desktop Navigation */}

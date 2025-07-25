@@ -1,28 +1,31 @@
-// src/context/CartContext.jsx
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 
-export const CartContext = createContext();
+const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
+  const [isCartLoaded, setIsCartLoaded] = useState(false); // ✅ NEW
 
-  // ✅ Load from localStorage on first load
+  // ✅ Load cart from localStorage on first render
   useEffect(() => {
-    const storedCart = localStorage.getItem("cart");
-    if (storedCart) {
-      setCart(JSON.parse(storedCart));
+    const savedCart = localStorage.getItem("cart");
+    if (savedCart) {
+      setCart(JSON.parse(savedCart));
     }
+    setIsCartLoaded(true); // ✅ Only after load attempt
   }, []);
 
-  // ✅ Save to localStorage whenever cart changes
+  // ✅ Save cart to localStorage only after it's loaded
   useEffect(() => {
-    localStorage.setItem("cart", JSON.stringify(cart));
-  }, [cart]);
+    if (isCartLoaded) {
+      localStorage.setItem("cart", JSON.stringify(cart));
+    }
+  }, [cart, isCartLoaded]);
 
   const addToCart = (product) => {
     setCart((prevCart) => {
-      const itemExists = prevCart.find((item) => item.id === product.id);
-      if (itemExists) {
+      const existing = prevCart.find((item) => item.id === product.id);
+      if (existing) {
         return prevCart.map((item) =>
           item.id === product.id
             ? { ...item, quantity: item.quantity + 1 }
@@ -42,11 +45,27 @@ export const CartProvider = ({ children }) => {
     setCart([]);
   };
 
+  const updateQuantity = (id, quantity) => {
+    setCart((prevCart) =>
+      prevCart.map((item) =>
+        item.id === id ? { ...item, quantity: Math.max(1, quantity) } : item
+      )
+    );
+  };
+
   return (
     <CartContext.Provider
-      value={{ cart, setCart, addToCart, removeFromCart, clearCart }}
+      value={{ cart, addToCart, removeFromCart, clearCart, updateQuantity }}
     >
       {children}
     </CartContext.Provider>
   );
+};
+
+export const useCart = () => {
+  const context = useContext(CartContext);
+  if (!context) {
+    throw new Error("useCart must be used within a CartProvider");
+  }
+  return context;
 };

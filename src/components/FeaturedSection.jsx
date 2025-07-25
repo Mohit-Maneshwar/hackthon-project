@@ -5,19 +5,19 @@ const products = [
     id: 1,
     title: "Smart Watch",
     description: "Stay connected, track fitness, and look stylish.",
-    image: "https://via.placeholder.com/300x200.png?text=Smart+Watch",
+    image: "https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fFNtYXJ0JTIwV2F0Y2h8ZW58MHx8MHx8fDA%3D",
   },
   {
     id: 2,
-    title: "Wireless Earbuds",
-    description: "Enjoy wireless freedom with amazing sound.",
-    image: "https://via.placeholder.com/300x200.png?text=Earbuds",
+    title: "Woman's Clothing",
+    description: "Each outfit tells a story — make yours bold, beautiful, and true to you.",
+    image: "https://images.unsplash.com/photo-1579664531470-ac357f8f8e2b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fHdvbWFuJTIwY2xvdGhzJTIwb25seSUyMGNsb3Roc3xlbnwwfHwwfHx8MA%3D%3D",
   },
   {
     id: 3,
     title: "Gaming Headset",
-    description: "Crystal-clear audio for immersive gaming.",
-    image: "https://via.placeholder.com/300x200.png?text=Headset",
+    description: "Experience every footstep, explosion, and whisper with pinpoint precision.",
+    image: "https://images.unsplash.com/photo-1610041321327-b794c052db27?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fEdhbWluZyUyMEhlYWRzZXR8ZW58MHx8MHx8fDA%3D",
   },
 ];
 

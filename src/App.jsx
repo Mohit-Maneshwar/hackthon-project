@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import AllRoutes from "./routes/AllRoutes";
 import { useEffect } from "react";
 import { initLenis } from "./utils/lenis";
+import Footer from "./components/Footer";
 
 function App() {
   useEffect(() => {
@@ -13,6 +14,7 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <AllRoutes />
+      <Footer />
     </BrowserRouter>
   );
 }

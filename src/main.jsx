@@ -5,9 +5,6 @@ import "./index.css";
 import { initLenis } from "./utils/lenis";
 import { CartProvider } from "./context/CartContext";
 
-
-
-
 const Root = () => {
   useEffect(() => {
     initLenis();
