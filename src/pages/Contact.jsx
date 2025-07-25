@@ -24,15 +24,15 @@ const Contact = () => {
             <div className="space-y-6 text-gray-300">
               <div>
                 <h4 className="font-semibold text-white">📍 Address</h4>
-                <p>123 Mane Street, Delhi, India</p>
+                <p>Jarahmohgaon, Balaghat, M.P., India</p>
               </div>
               <div>
                 <h4 className="font-semibold text-white">📞 Phone</h4>
-                <p>+91 98765 43210</p>
+                <p>+91 7880298698</p>
               </div>
               <div>
                 <h4 className="font-semibold text-white">✉️ Email</h4>
-                <p>support@manestore.com</p>
+                <p>mohitmane145@gmail.com</p>
               </div>
             </div>
           </motion.div>
