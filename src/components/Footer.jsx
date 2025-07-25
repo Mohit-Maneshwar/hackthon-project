@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { FaFacebookF, FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
 
 const Footer = () => {
@@ -16,10 +17,18 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-4 font-playfair">Quick Links</h3>
           <ul className="space-y-2 text-sm text-gray-400">
-            <li className="hover:text-white transition duration-300 cursor-pointer">Home</li>
-            <li className="hover:text-white transition duration-300 cursor-pointer">Shop</li>
-            <li className="hover:text-white transition duration-300 cursor-pointer">About</li>
-            <li className="hover:text-white transition duration-300 cursor-pointer">Contact</li>
+            <li>
+              <Link to="/" className="hover:text-white transition duration-300">Home</Link>
+            </li>
+            <li>
+              <Link to="/products" className="hover:text-white transition duration-300">Shop</Link>
+            </li>
+            <li>
+              <Link to="/about" className="hover:text-white transition duration-300">About</Link>
+            </li>
+            <li>
+              <Link to="/contact" className="hover:text-white transition duration-300">Contact</Link>
+            </li>
           </ul>
         </div>
 
@@ -27,10 +36,10 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-4 font-playfair">Support</h3>
           <ul className="space-y-2 text-sm text-gray-400">
-            <li className="hover:text-white transition duration-300 cursor-pointer">FAQs</li>
-            <li className="hover:text-white transition duration-300 cursor-pointer">Shipping & Returns</li>
-            <li className="hover:text-white transition duration-300 cursor-pointer">Privacy Policy</li>
-            <li className="hover:text-white transition duration-300 cursor-pointer">Terms of Service</li>
+            <li><Link to="/faq" className="hover:text-white transition duration-300">FAQs</Link></li>
+            <li><Link to="/shipping-returns" className="hover:text-white transition duration-300">Shipping & Returns</Link></li>
+            <li><Link to="/privacy" className="hover:text-white transition duration-300">Privacy Policy</Link></li>
+            <li><Link to="/terms" className="hover:text-white transition duration-300">Terms of Service</Link></li>
           </ul>
         </div>
 
@@ -38,16 +47,16 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-4 font-playfair">Follow Us</h3>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-blue-400 transition duration-300 text-lg">
+            <a href="https://www.facebook.com/mohit.maneswar.7?mibextid=ZbWKwL" className="hover:text-blue-400 transition duration-300 text-lg">
               <FaFacebookF />
             </a>
-            <a href="#" className="hover:text-pink-500 transition duration-300 text-lg">
+            <a href="https://www.instagram.com/mohit__mane__145/" className="hover:text-pink-500 transition duration-300 text-lg">
               <FaInstagram />
             </a>
-            <a href="#" className="hover:text-sky-400 transition duration-300 text-lg">
+            <a href="https://x.com/" className="hover:text-sky-400 transition duration-300 text-lg">
               <FaTwitter />
             </a>
-            <a href="#" className="hover:text-gray-300 transition duration-300 text-lg">
+            <a href="https://github.com/Mohit-Maneshwar" className="hover:text-gray-300 transition duration-300 text-lg">
               <FaGithub />
             </a>
           </div>
